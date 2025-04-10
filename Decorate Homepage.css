@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
     margin: 0;
     font-family: 'Kanit', sans-serif;
@@ -6,10 +6,9 @@ body {
     color: #333;
 }
 
-/* Header layout */
 header {
     display: flex;
-    justify-content: flex-start; /* Aligns logo and nav to the left */
+    justify-content: flex-start; 
     align-items: center;
     padding: 15px 40px;
     background-color: #ffffff;
@@ -114,6 +113,7 @@ header {
 
 .cta-button {
     background-color: #00aeff;
+    text-decoration: none;
     color: white;
     border: none;
     padding: 10px 20px;
