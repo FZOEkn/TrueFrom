@@ -1,0 +1,113 @@
+/* Login & Signup Decorate.CSS */
+
+/* ---------- พื้นฐานสำหรับหน้าจอใหญ่ ---------- */
+body {
+    display: flex;
+    justify-content: flex-start;  /* ชิดซ้าย */
+    align-items: center;          /* จัดกลางแนวตั้ง */
+    height: 100vh;                /* เต็มความสูงหน้าจอ */
+    margin: 0;
+    padding-left: 100px;          /* ระยะห่างจากขอบซ้าย */
+    background: linear-gradient(135deg, #dff9fb, #c7ecee);
+    font-family: 'Kanit', sans-serif;
+}
+
+.infrom {
+    background-color: white;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.infrom h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #2f3640;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #dcdde1;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f5f6fa;
+}
+
+form label {
+    margin-right: 10px;
+}
+
+form input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    flex: 1;
+    padding: 5px 0;
+    color: #2f3640;
+}
+
+form input::placeholder {
+    color: #a4b0be;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00a8ff;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+button[type="submit"]:hover {
+    background-color: #0097e6;
+}
+
+/* ---------- ส่วนเสริม: Responsive สำหรับมือถือ ---------- */
+@media (max-width: 768px) {
+    body {
+        justify-content: center;      /* อยู่กลางจอเมื่อจอเล็ก */
+        padding: 20px;                /* ลด padding ด้านข้าง */
+        height: auto;                 /* ปรับความสูงอัตโนมัติ */
+        flex-direction: column;       /* ถ้าคุณมีหลายองค์ประกอบใน body */
+    }
+
+    .infrom {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .infrom h1 {
+        font-size: 1.5rem;
+    }
+}
+
+#error-message {
+    color: #e74c3c; /* สีแดงสำหรับข้อความข้อผิดพลาด */
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form div.incorrect {
+    border: 1px solid #e74c3c; /* เปลี่ยนกรอบเป็นสีแดง */
+    background-color: #f8d7da; /* เปลี่ยนพื้นหลังเป็นสีชมพูอ่อน */
+}
+
+form div.incorrect input {
+    color: #e74c3c; /* เปลี่ยนสีตัวอักษรเป็นสีแดง */
+}
